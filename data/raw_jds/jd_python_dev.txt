@@ -1,0 +1,43 @@
+Job Title: Python Developer (Backend)
+Company: BuildFast Solutions Pvt. Ltd.
+Location: Bangalore / Hybrid
+Experience: 1–4 years
+
+--- Job Description ---
+
+We are hiring a Python Developer to build scalable backend services and REST APIs
+for our SaaS platform used by 500+ enterprise clients. You will work in a fast-paced
+agile team and own the development of core backend features.
+
+Responsibilities:
+- Develop and maintain RESTful APIs using Django or FastAPI.
+- Write clean, modular, and well-documented Python code.
+- Design and optimize relational database schemas (PostgreSQL / MySQL).
+- Integrate third-party APIs and microservices.
+- Write unit tests and integration tests using pytest.
+- Participate in code reviews and agile ceremonies (standups, sprint planning).
+- Identify and resolve performance bottlenecks in the backend.
+- Collaborate with frontend developers and DevOps engineers.
+
+Required Skills:
+- Python (3.8+): strong OOP, async programming, decorators, context managers.
+- Web Frameworks: Django REST Framework (DRF) or FastAPI.
+- Databases: PostgreSQL or MySQL — schema design, indexing, ORM (SQLAlchemy / Django ORM).
+- REST API design: authentication (JWT, OAuth2), versioning, pagination.
+- Testing: pytest, unittest, mocking.
+- Version Control: Git — branching strategies, pull requests, code reviews.
+- Linux / Unix basics: shell scripting, process management, SSH.
+- Basic Docker knowledge: Dockerfile, docker-compose.
+
+Good to Have:
+- Redis for caching and task queues (Celery + Redis).
+- Message brokers: RabbitMQ or Apache Kafka.
+- CI/CD pipelines: GitHub Actions or Jenkins.
+- Basic knowledge of React or Vue for API integration understanding.
+- Experience with AWS (EC2, S3, RDS) or Azure.
+- GraphQL API design.
+
+Education:
+- B.E / B.Tech / MCA in Computer Science or Information Technology.
+
+CTC: ₹5 LPA – ₹12 LPA (based on skills and experience)

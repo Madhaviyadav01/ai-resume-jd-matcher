@@ -1,0 +1,40 @@
+Job Title: Data Scientist
+Company: TechAnalytics Inc.
+Location: Remote (India)
+Experience: 2–5 years
+
+--- Job Description ---
+
+We are looking for a skilled Data Scientist to join our growing analytics team.
+You will be responsible for building, deploying, and maintaining machine learning
+models that drive business decisions across multiple product lines.
+
+Responsibilities:
+- Design and implement supervised and unsupervised machine learning models.
+- Perform exploratory data analysis (EDA) on large datasets.
+- Build end-to-end data pipelines for model training and inference.
+- Collaborate with data engineers and business stakeholders.
+- Present findings and model results through visualizations and reports.
+- Deploy models to production using cloud platforms.
+
+Required Skills:
+- Python (expert level) with hands-on experience in scikit-learn, pandas, numpy.
+- Machine Learning: regression, classification, clustering, model evaluation.
+- Deep Learning: TensorFlow or PyTorch for neural network development.
+- Natural Language Processing (NLP): text classification, embeddings, transformers.
+- SQL: complex queries, window functions, query optimization.
+- Data Visualization: matplotlib, seaborn, or Tableau.
+- Version control with Git and GitHub.
+- Cloud platforms: AWS (S3, EC2, SageMaker) or Google Cloud (BigQuery, Vertex AI).
+- Statistics: hypothesis testing, probability distributions, A/B testing.
+
+Good to Have:
+- Experience with MLflow or Weights & Biases for experiment tracking.
+- Knowledge of Apache Spark or PySpark for big data processing.
+- Docker and Kubernetes for model containerization.
+- Experience with Hugging Face Transformers library.
+
+Education:
+- B.Tech / M.Tech / MCA in Computer Science, Data Science, or related field.
+
+CTC: ₹8 LPA – ₹18 LPA (based on experience)

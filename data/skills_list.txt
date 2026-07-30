@@ -1,0 +1,214 @@
+# Skills Database — AI Resume-JD Matcher
+# One skill per line. Used by preprocessor.py for keyword-based skill extraction.
+# Covers: Programming, Web, Data Science, Cloud, Databases, DevOps, Soft Skills, and more.
+
+# --- Programming Languages ---
+python
+java
+javascript
+typescript
+c
+c++
+c#
+r
+go
+golang
+scala
+kotlin
+swift
+ruby
+php
+rust
+matlab
+bash
+shell scripting
+perl
+
+# --- Web Development ---
+html
+css
+react
+reactjs
+angular
+angularjs
+vue
+vuejs
+nodejs
+node.js
+express
+expressjs
+django
+flask
+fastapi
+spring
+spring boot
+asp.net
+rest api
+restful api
+graphql
+jquery
+bootstrap
+tailwind
+sass
+scss
+webpack
+redux
+next.js
+nuxt.js
+
+# --- Data Science & AI ---
+machine learning
+deep learning
+neural network
+natural language processing
+nlp
+computer vision
+data science
+data analysis
+data mining
+feature engineering
+model training
+model evaluation
+transfer learning
+reinforcement learning
+generative ai
+large language models
+llm
+prompt engineering
+tensorflow
+pytorch
+keras
+scikit-learn
+sklearn
+hugging face
+transformers
+sentence transformers
+bert
+gpt
+xgboost
+lightgbm
+random forest
+decision tree
+linear regression
+logistic regression
+k-means
+clustering
+pca
+dimensionality reduction
+time series analysis
+a/b testing
+statistical analysis
+hypothesis testing
+
+# --- Data Engineering ---
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+jupyter
+pyspark
+apache spark
+hadoop
+airflow
+apache kafka
+etl
+data pipeline
+data warehouse
+data lake
+dbt
+
+# --- Databases ---
+sql
+mysql
+postgresql
+sqlite
+mongodb
+nosql
+redis
+cassandra
+oracle
+microsoft sql server
+dynamodb
+elasticsearch
+neo4j
+firebase
+
+# --- Cloud & DevOps ---
+aws
+amazon web services
+azure
+microsoft azure
+google cloud
+gcp
+docker
+kubernetes
+ci/cd
+jenkins
+github actions
+gitlab ci
+terraform
+ansible
+linux
+unix
+nginx
+apache
+microservices
+serverless
+lambda
+
+# --- Version Control & Tools ---
+git
+github
+gitlab
+bitbucket
+jira
+confluence
+agile
+scrum
+kanban
+
+# --- Security ---
+cybersecurity
+penetration testing
+ethical hacking
+network security
+cryptography
+ssl
+oauth
+jwt
+
+# --- Mobile Development ---
+android
+ios
+flutter
+react native
+xamarin
+
+# --- Soft Skills ---
+communication
+teamwork
+problem solving
+critical thinking
+leadership
+time management
+project management
+adaptability
+creativity
+collaboration
+presentation
+analytical thinking
+
+# --- Certifications / Domain ---
+aws certified
+azure certified
+google certified
+pmp
+six sigma
+data engineering
+cloud computing
+blockchain
+iot
+internet of things
+embedded systems
+vlsi
