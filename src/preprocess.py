@@ -1,17 +1,3 @@
-"""
-src/preprocess.py — Text Cleaning & Normalisation
-===================================================
-Provides a single public function:
-
-    clean_text(text: str) -> str
-
-Removes noise (URLs, HTML, emails, phone numbers, punctuation) and
-normalises whitespace so downstream NLP (SBERT embeddings, skill
-extraction) works on clean, consistent input.
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 from __future__ import annotations
 
 import re
