@@ -1,16 +1,3 @@
-"""
-src/skill_extractor.py — Technical Skill Extraction & Gap Analysis
-===================================================================
-Provides:
-    extract_skills(text)              -> set[str]
-    get_missing_skills(resume, jd)    -> tuple[set[str], set[str]]
-
-Skills are matched case-insensitively using whole-word regex so short tokens
-like "r", "c", or "go" are not spuriously matched inside longer words.
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 from __future__ import annotations
 
 import re
