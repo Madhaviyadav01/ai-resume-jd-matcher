@@ -1,18 +1,3 @@
-"""
-src/parser.py — Text Extraction for PDF and DOCX Files
-=======================================================
-Provides three public functions:
-
-    extract_text_from_pdf(pdf_file)   -> str  (pdfplumber)
-    extract_text_from_docx(docx_file) -> str  (python-docx)
-    extract_text(file_obj)            -> str  (dispatcher by file name/extension)
-
-All functions return an empty string on failure rather than raising; callers
-are responsible for checking that the returned string is non-empty.
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 from __future__ import annotations
 
 import io
