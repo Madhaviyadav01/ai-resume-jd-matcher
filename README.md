@@ -1,6 +1,6 @@
 # AI Resume–JD Matcher
 
-> **MCA Major Project** | AI-powered application to match resumes against job descriptions and rank candidates automatically.
+An AI-powered web application that analyzes how well a resume matches a given job description using **Natural Language Processing (NLP)** and **Sentence-BERT (SBERT)**. The application calculates a semantic match score, identifies skill gaps, provides personalized resume improvement suggestions, recommends relevant certification courses, and stores previous analysis history.
 
 ---
 
@@ -19,25 +19,36 @@ This application uses **Natural Language Processing (NLP)** and **Machine Learni
 
 ## 🗂️ Project Structure
 
-```
+```text
 AI_resume_jd_matcher/
+├── data/                       # Datasets, Master Skill Files, and Local DB
+│   ├── raw_jds/                # Raw job description inputs
+│   ├── raw_resumes/            # Raw resume file uploads
+│   ├── Resumes/                # Processed resume documents
+│   ├── app_database.db         # Local SQLite database
+│   └── skills_list.txt         # Master list of target technical skills
 │
-├── app.py                  # Streamlit web application (main entry point)
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
+├── src/                        # Core Application Business & ML Logic
+│   ├── __init__.py            
+│   ├── auth.py                 # User authentication & password hashing
+│   ├── courses_manager.py      # Recommendation engine logic
+│   ├── database.py             # SQLite CRUD operations
+│   ├── matcher.py              # SBERT embedding generation & Cosine Similarity
+│   ├── parser.py               # PDF and DOCX text extraction pipelines
+│   ├── preprocess.py           # Text normalization & cleaning
+│   ├── skill_extractor.py      # Regex-based skill parsing & gap analysis
+│   └── utils.py                # Common helper routines
 │
-├── modules/
-│   ├── __init__.py
-│   ├── extractor.py        # PDF & DOCX text extraction
-│   ├── preprocessor.py     # NLP preprocessing + skill extraction
-│   ├── matcher.py          # Embedding generation + cosine similarity
-│   └── recommender.py      # Resume improvement recommendations
+├── views/                      # Frontend UI Views
+│   ├── __init__.py            
+│   ├── auth_view.py            # Login & Registration interfaces
+│   ├── history_view.py         # Analysis history dashboard UI
+│   └── matcher_view.py         # Primary upload & execution dashboard UI
 │
-├── data/
-│   └── skills_list.txt     # Curated skills keyword database
-│
-└── tests/
-    └── test_modules.py     # Unit tests for all modules
+├── .gitignore                  # Standard Git ignore rules
+├── app.py                      # Application entry point & router
+├── README.md                   # Project documentation
+└── requirements.txt            # Python environment dependencies
 ```
 
 ---
