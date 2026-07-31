@@ -1,6 +1,4 @@
 """
-src/courses_manager.py  —  Course & Certificate Recommendations
-===============================================================
 Provides curated, context-aware course and certification recommendations 
 based on candidate skill gaps.
 """
