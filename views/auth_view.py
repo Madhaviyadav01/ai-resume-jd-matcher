@@ -1,14 +1,3 @@
-"""
-views/auth_view.py  —  Login & Registration Screen
-====================================================
-DESIGN RULE:
-    Every st.markdown(unsafe_allow_html=True) contains COMPLETE self-contained HTML.
-    Streamlit widgets are placed OUTSIDE HTML containers.
-
-Backend:
-    src.auth.register_user(username, password)      -> bool
-    src.auth.authenticate_user(username, password)  -> bool
-"""
 from __future__ import annotations
 import streamlit as st
 from src.auth import register_user, authenticate_user

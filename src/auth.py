@@ -1,21 +1,3 @@
-"""
-src/auth.py — Authentication Logic for AI Resume–JD Matcher
-=============================================================
-Provides pure authentication utilities (no UI code).
-
-Public API
-----------
-    hash_password(password)            -> str   (SHA-256 hex digest)
-    register_user(username, password)  -> bool  (True = success)
-    authenticate_user(username, password) -> bool (True = valid credentials)
-
-Dependencies
-------------
-    src.database  — create_user_db(), get_user_db()
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 from __future__ import annotations
 
 import hashlib
