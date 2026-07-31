@@ -1,20 +1,3 @@
-"""
-src/matcher.py — Semantic Resume–JD Matching via Sentence Transformers
-=======================================================================
-Provides:
-    get_match_score(resume_text, jd_text) -> float
-
-Uses the ``all-MiniLM-L6-v2`` SBERT model to encode both texts into dense
-vector embeddings, then returns the cosine similarity as a percentage score.
-
-The model is lazy-loaded on first call and cached in the module-level
-``_model`` variable so it is never reloaded during the lifetime of the
-Python process (critical for Streamlit, which re-runs the script on every
-interaction).
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 from __future__ import annotations
 
 from sklearn.metrics.pairwise import cosine_similarity

@@ -1,17 +1,3 @@
-"""
-src/utils.py — UI Utility Helpers for the Streamlit Application
-================================================================
-Provides pure functions that generate Streamlit-ready strings/HTML:
-
-    format_score_color(score)              -> str  (hex color code)
-    create_skill_chips_html(skills, color) -> str  (HTML chip badges)
-
-These helpers contain **no** ``st.*`` calls — they only produce strings that
-callers pass to ``st.markdown(..., unsafe_allow_html=True)``.
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 from __future__ import annotations
 
 
