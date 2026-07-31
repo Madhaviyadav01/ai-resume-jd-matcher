@@ -1,24 +1,3 @@
-"""
-database.py — SQLite Database Layer
-=====================================
-Handles all database operations for the AI Resume–JD Matcher.
-
-Schema:
-  - users   : id, username (UNIQUE), password (SHA-256 hashed)
-  - history : id, username, resume_name, match_score,
-              missing_skills, timestamp
-
-CRUD helpers:
-  - init_db()           → Creates tables if they don't exist
-  - create_user()       → Register a new user (returns True/False)
-  - login_user()        → Verify credentials (returns True/False)
-  - save_history()      → Save a match result for a user
-  - get_user_history()  → Retrieve all match history for a user
-  - delete_history()    → Delete a specific history record
-
-Author: AI Resume–JD Matcher (MCA Major Project)
-"""
-
 import sqlite3
 import hashlib
 import os
