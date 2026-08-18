@@ -1,18 +1,42 @@
-AI Resume to Job Description Matcher 🎯📄
-An intelligent, AI-powered web application that automatically compares resumes against job descriptions (JD) using Natural Language Processing (NLP) and Sentence-BERT (SBERT). The system provides an instant semantic match score, highlights skill gaps, suggests actionable resume improvements, and recommends relevant certification courses to boost job readiness.
+# 🎯 AI Resume to Job Description Matcher
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Hugging Face](https://img.shields.io/badge/Model-Sentence--BERT-yellow?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+An intelligent, AI-powered recruitment intelligence tool that evaluates candidate compatibility against Job Descriptions (JDs) using **Natural Language Processing (NLP)** and **Sentence-BERT (SBERT)**. Moving beyond rigid keyword lookups, it measures deep semantic contextual alignment, identifies critical skill gaps, and recommends targeted certifications to optimize applicant success.
+
 ---
-🌟 Key Features
-Semantic Document Matching: Uses Sentence-BERT (SBERT) and Cosine Similarity to understand the contextual meaning of resumes and job descriptions beyond mere keyword matching.
-Multi-Format Document Parsing: Seamlessly extract and process text from PDF and DOCX files using `pdfplumber`, `PyPDF2`, and `python-docx`.
-Skill Gap & Keyword Analysis:
-🟢 Matched Skills: Identifies existing skills aligned with the job description.
-🔴 Missing Skills: Highlights critical requirements missing from the resume.
-🟣 Additional Skills: Lists extra candidate strengths.
-Personalized Recommendations: Generates actionable suggestions to tailor resume bullet points and recommends online certification courses for missing skills.
-User Authentication & History Tracker: Secure registration and login system with a local SQLite database to track, revisit, and manage past analysis records.
-Interactive UI/Dashboard: Built with Streamlit for a clean, intuitive, and modern user experience.
+
+## 📌 Table of Contents
+- [🌟 Key Features](#-key-features)
+- [📊 System Architecture](#-system-architecture)
+- [📈 Benchmarks & Evaluation](#-benchmarks--evaluation)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📂 Project Structure](#-project-structure)
+- [🚀 Quickstart Guide](#-quickstart-guide)
+- [💡 How to Use](#-how-to-use)
+- [🔮 Roadmap & Future Scope](#-roadmap--future-scope)
+- [🤝 Contributing](#-contributing)
+- [📄 License & Authors](#-license--authors)
+
 ---
-📊 System Architecture & Workflow
+
+## 🌟 Key Features
+
+* **🧠 Context-Aware Semantic Matching:** Employs `all-MiniLM-L6-v2` dense vector embeddings and Cosine Similarity to capture the true semantic intent of qualifications and job requirements.
+* **📑 Robust Multi-Format Ingestion:** Extracts structured text cleanly from `.pdf` and `.docx` files using `pdfplumber`, `PyPDF2`, and `python-docx`.
+* **🔍 Granular Skill Gap Breakdown:**
+  * 🟢 **Matched Skills:** Overlapping competencies identified in both documents.
+  * 🔴 **Missing Skills:** Critical requirements missing from the resume.
+  * 🟣 **Additional Skills:** Candidate edge-skills outside the direct scope.
+* **💡 Actionable Insights & Course Engine:** Delivers dynamic suggestions to refine resume bullet points and maps missing skills to direct certification courses.
+* **🔐 Local Persistence & Session Management:** Built-in user authentication and an SQLite database to securely store, review, and delete historical match reports.
+
+---
+
+## 📊 System Architecture & Workflow
 ```plaintext
 +-------------------------------------------------------------+
 |                     Streamlit Frontend                      |
@@ -55,15 +79,20 @@ Interactive UI/Dashboard: Built with Streamlit for a clean, intuitive, and moder
 +-------------------------------------------------------------+
 ```
 ---
-📈 Performance & Evaluation
+## 📈 Performance & Evaluation
+---
 The system was evaluated against standard test benchmarks for semantic similarity and candidate shortlisting:
 Metric	Score / Result	Details
 Accuracy	86.7%	Reliable overall matching performance
 Recall	100.0%	Identified all qualified candidates without false negatives
 Precision	77.8%	High match relevance
 Average Latency	459 ms / query	Real-time response speed
+
 ---
-🛠️ Tech Stack & Libraries
+
+
+## 🛠️ Tech Stack & Libraries
+---
 Language: Python 3.11+
 Frontend / UI: Streamlit
 NLP & Deep Learning: Sentence-Transformers (`all-MiniLM-L6-v2`), Hugging Face Transformers, Scikit-learn
@@ -71,7 +100,8 @@ Document Parsing: `pdfplumber`, `PyPDF2`, `python-docx`
 Database: SQLite
 Data Manipulation: `pandas`, `numpy`
 ---
-📂 Project Structure
+
+## 📂 Project Structure
 ```plaintext
 AI_resume_jd_matcher/
 ├── data/
@@ -104,7 +134,8 @@ AI_resume_jd_matcher/
 └── requirements.txt             # Python project dependencies
 ```
 ---
-🚀 Getting Started
+
+## 🚀 Getting Started
 Follow these steps to set up and run the project locally.
 1. Prerequisites
 Python `3.10` or `3.11` installed on your machine.
@@ -136,7 +167,9 @@ streamlit run app.py
 ```
 Open your browser and navigate to `http://localhost:8501`.
 ---
-💡 How to Use
+
+## 💡 How to Use
+---
 Register / Login: Create a new account or log in with your existing credentials.
 Upload Resume: Select and upload your resume in `.pdf` or `.docx` format.
 Input Job Description: Either upload a job description file or paste the job text directly.
@@ -150,9 +183,16 @@ Check History: Go to the History tab in the sidebar to review past analyses anyt
 
 ---
 
-🔮 Future Enhancements
+## 🔮 Future Enhancements
+---
 Recruiter Dashboard: Enable HR teams to upload a single job description and rank batch/multiple candidate resumes simultaneously.
 Layout-Aware OCR Parsing: Improved text extraction for multi-column and heavily styled resumes.
 LLM Integration: Provide generative AI feedback, personalized bullet point rewriting, and interview preparation questions.
 Cloud Deployment: Containerization with Docker and deployment to AWS / GCP.
 ---
+
+## 📚 References
+
+1. **Sentence-BERT:** N. Reimers and I. Gurevych, *"Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks,"* Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP-IJCNLP), Hong Kong, China, 2019, pp. 3982–3992[cite: 2].
+2. **Streamlit:** Streamlit Inc., *"Streamlit Documentation,"* Available: [https://docs.streamlit.io/](https://docs.streamlit.io/)[cite: 2].
+3. **Sentence-Transformers:** Hugging Face Inc., *"Sentence-Transformers Documentation,"* Available: [https://www.sbert.net/](https://www.sbert.net/)[cite: 2].
