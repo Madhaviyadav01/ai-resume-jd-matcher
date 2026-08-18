@@ -80,45 +80,45 @@ An intelligent, AI-powered recruitment intelligence tool that evaluates candidat
 
 ## 📈 Performance & Evaluation
 
-The system was evaluated against real-world test pairs of resumes and job descriptions to measure semantic matching accuracy, candidate shortlisting reliability, and real-time processing efficiency[cite: 2]:
+The system was evaluated against real-world test pairs of resumes and job descriptions to measure semantic matching accuracy, candidate shortlisting reliability, and real-time processing efficiency:
 
 | Metric | Score / Benchmark | Performance Analysis |
 | :--- | :---: | :--- |
-| **Accuracy** | **86.7%** | High overall reliability in matching candidate profiles to target job requirements[cite: 2]. |
-| **Recall** | **100.0%** | Identified all qualified candidates with zero false negatives[cite: 2]. |
-| **Precision** | **77.8%** | High match relevance, with minor false positives caused by closely related domain terms[cite: 2]. |
-| **Average Latency** | **459 ms / query** | Sub-second inference speed suitable for real-time interactive usage[cite: 2]. |
+| **Accuracy** | **86.7%** | High overall reliability in matching candidate profiles to target job requirements. |
+| **Recall** | **100.0%** | Identified all qualified candidates with zero false negatives. |
+| **Precision** | **77.8%** | High match relevance, with minor false positives caused by closely related domain terms. |
+| **Average Latency** | **459 ms / query** | Sub-second inference speed suitable for real-time interactive usage. |
 
 ### 🔍 Key Evaluation Highlights
-* **Zero False Negatives:** The 100% recall ensures no suitable candidate is erroneously rejected during screening[cite: 2].
-* **Low-Latency Inference:** Generates SBERT vector embeddings and computes Cosine Similarity in under half a second on standard CPU hardware[cite: 2].
-* **Reliable Classification:** Successfully separated suitable candidates from unqualified profiles across multi-domain test inputs[cite: 2].
+* **Zero False Negatives:** The 100% recall ensures no suitable candidate is erroneously rejected during screening.
+* **Low-Latency Inference:** Generates SBERT vector embeddings and computes Cosine Similarity in under half a second on standard CPU hardware.
+* **Reliable Classification:** Successfully separated suitable candidates from unqualified profiles across multi-domain test inputs.
 
 ---
 
 ## 🛠️ Tech Stack & Dependencies
 
-Built entirely using an open-source, lightweight Python ecosystem[cite: 2]:
+Built entirely using an open-source, lightweight Python ecosystem:
 
 * **🐍 Core & Runtime**
-  * `Python 3.11+` – Primary backend programming language[cite: 2]
-  * `VS Code` & `Git / GitHub` – Development environment and version control[cite: 2]
+  * `Python 3.11+` – Primary backend programming language
+  * `VS Code` & `Git / GitHub` – Development environment and version control
 
 * **🖥️ User Interface**
-  * `Streamlit` – Interactive frontend web dashboard, routing, and session state management[cite: 2]
+  * `Streamlit` – Interactive frontend web dashboard, routing, and session state management
 
 * **🧠 AI, NLP & Semantic Matching**
-  * `Sentence-Transformers (SBERT)` – Transformer embeddings using the `all-MiniLM-L6-v2` model[cite: 2]
-  * `Hugging Face Transformers` – Deep learning model integration[cite: 2]
-  * `Scikit-Learn` – Cosine similarity calculation and classification evaluation metrics[cite: 2]
+  * `Sentence-Transformers (SBERT)` – Transformer embeddings using the `all-MiniLM-L6-v2` model
+  * `Hugging Face Transformers` – Deep learning model integration
+  * `Scikit-Learn` – Cosine similarity calculation and classification evaluation metrics
 
 * **📄 Document Ingestion & Parsing**
-  * `pdfplumber` & `PyPDF2` – Text and layout extraction from PDF resumes[cite: 2]
-  * `python-docx` – Text extraction from Microsoft Word documents[cite: 2]
+  * `pdfplumber` & `PyPDF2` – Text and layout extraction from PDF resumes
+  * `python-docx` – Text extraction from Microsoft Word documents
 
 * **💾 Data Management & Persistence**
-  * `SQLite3` – Embedded local database for user authentication and match history logging[cite: 2]
-  * `Pandas` & `NumPy` – Structured data manipulation, array operations, and metrics processing[cite: 2]
+  * `SQLite3` – Embedded local database for user authentication and match history logging
+  * `Pandas` & `NumPy` – Structured data manipulation, array operations, and metrics processing
 
 ## 📂 Project Structure
 ```plaintext
@@ -192,29 +192,29 @@ Open your browser and navigate to `http://localhost:8501`.
 Follow this step-by-step workflow to analyze and optimize your resume:
 
 1. **🔐 Authentication & Session Setup**
-   * Create a new profile on the registration screen or log in with your existing credentials[cite: 2].
-   * All subsequent evaluations will be automatically associated with your user session[cite: 2].
+   * Create a new profile on the registration screen or log in with your existing credentials.
+   * All subsequent evaluations will be automatically associated with your user session.
 
 2. **📄 Document Ingestion**
-   * **Resume:** Upload your resume document directly in `.pdf` or `.docx` format[cite: 2].
-   * **Job Description:** Paste the raw target job description into the text area or upload it as a file[cite: 2].
+   * **Resume:** Upload your resume document directly in `.pdf` or `.docx` format.
+   * **Job Description:** Paste the raw target job description into the text area or upload it as a file.
 
 3. **⚡ Trigger AI Semantic Analysis**
-   * Click **Analyze Match** to run the processing pipeline[cite: 2].
-   * The system extracts text, normalizes content, encodes SBERT embeddings, and matches domain skills[cite: 2].
+   * Click **Analyze Match** to run the processing pipeline.
+   * The system extracts text, normalizes content, encodes SBERT embeddings, and matches domain skills.
 
 4. **📊 Comprehensive Insights & Results Dashboard**
-   * **Semantic Match Score:** Check the overall contextual compatibility percentage generated via Cosine Similarity[cite: 2].
+   * **Semantic Match Score:** Check the overall contextual compatibility percentage generated via Cosine Similarity.
    * **Skill Gap Categorization:**
-     * 🟢 **Matched Skills:** Identified competencies present in both your resume and the job requirements[cite: 2].
-     * 🔴 **Missing Skills:** Critical requirements omitted from your resume[cite: 2].
-     * 🟣 **Additional Skills:** Candidate edge-strengths outside the core job description scope[cite: 2].
-   * **Actionable Resume Improvements:** Read dynamic, tailored suggestions to optimize your resume bullet points[cite: 2].
-   * **Course Recommendations:** Browse curated online certification courses mapped directly to your missing skills[cite: 2].
+     * 🟢 **Matched Skills:** Identified competencies present in both your resume and the job requirements.
+     * 🔴 **Missing Skills:** Critical requirements omitted from your resume.
+     * 🟣 **Additional Skills:** Candidate edge-strengths outside the core job description scope.
+   * **Actionable Resume Improvements:** Read dynamic, tailored suggestions to optimize your resume bullet points.
+   * **Course Recommendations:** Browse curated online certification courses mapped directly to your missing skills.
 
 5. **🕒 Analysis History Management**
-   * Switch to the **History** tab via the sidebar navigation[cite: 2].
-   * Review past similarity scores, expand detailed breakdowns, or delete outdated analysis logs from your local SQLite database[cite: 2].
+   * Switch to the **History** tab via the sidebar navigation.
+   * Review past similarity scores, expand detailed breakdowns, or delete outdated analysis logs from your local SQLite database.
 
 ---
 
@@ -223,19 +223,19 @@ Follow this step-by-step workflow to analyze and optimize your resume:
 Key features and architectural improvements planned for future releases:
 
 * **👥 Recruiter Mode (Dual-User Platform):**
-  * Introduce an HR/Recruiter dashboard allowing batch uploads to rank and screen multiple candidates simultaneously against a single job description[cite: 2].
+  * Introduce an HR/Recruiter dashboard allowing batch uploads to rank and screen multiple candidates simultaneously against a single job description.
 
 * **🔍 Layout-Aware Vision & OCR Document Parsing:**
-  * Implement advanced layout parsers to preserve reading order in complex multi-column resumes, tables, graphics, and icon-based contact fields[cite: 2].
+  * Implement advanced layout parsers to preserve reading order in complex multi-column resumes, tables, graphics, and icon-based contact fields.
 
 * **🤖 Large Language Model (LLM) & RAG Integration:**
-  * Integrate LLMs to provide automated generative bullet-point rewrites, ATS formatting suggestions, and customized interview preparation questions[cite: 2].
+  * Integrate LLMs to provide automated generative bullet-point rewrites, ATS formatting suggestions, and customized interview preparation questions.
 
 * **🔄 Dynamic Continuous Learning Loop:**
-  * Add a human-in-the-loop feedback mechanism to continuously expand the skill ontology and refine semantic scoring thresholds[cite: 2].
+  * Add a human-in-the-loop feedback mechanism to continuously expand the skill ontology and refine semantic scoring thresholds.
 
 * **☁️ Cloud & API Containerization:**
-  * Containerize the service with Docker and deploy scalable instances to cloud platforms (AWS / Azure / GCP) with RESTful API endpoints[cite: 2].
+  * Containerize the service with Docker and deploy scalable instances to cloud platforms (AWS / Azure / GCP) with RESTful API endpoints.
 
 ## 📚 References
 
