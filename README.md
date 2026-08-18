@@ -3,7 +3,6 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Hugging Face](https://img.shields.io/badge/Model-Sentence--BERT-yellow?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 An intelligent, AI-powered recruitment intelligence tool that evaluates candidate compatibility against Job Descriptions (JDs) using **Natural Language Processing (NLP)** and **Sentence-BERT (SBERT)**. Moving beyond rigid keyword lookups, it measures deep semantic contextual alignment, identifies critical skill gaps, and recommends targeted certifications to optimize applicant success.
 
@@ -11,15 +10,14 @@ An intelligent, AI-powered recruitment intelligence tool that evaluates candidat
 
 ## 📌 Table of Contents
 - [🌟 Key Features](#-key-features)
-- [📊 System Architecture](#-system-architecture)
-- [📈 Benchmarks & Evaluation](#-benchmarks--evaluation)
-- [🛠️ Tech Stack](#️-tech-stack)
+- [📊 System Architecture & workflow](#-system-architecture-&-workflow)
+- [📈 Performance & Evaluation](#-performance-&-evaluation)
+- [🛠️ Tech Stack & Dependencies](#️-tech-stack-&-dependencies)
 - [📂 Project Structure](#-project-structure)
-- [🚀 Quickstart Guide](#-quickstart-guide)
+- [🚀 Getting Started](#-getting-started)
 - [💡 How to Use](#-how-to-use)
-- [🔮 Roadmap & Future Scope](#-roadmap--future-scope)
-- [🤝 Contributing](#-contributing)
-- [📄 License & Authors](#-license--authors)
+- [🔮 Future Enhanements](#-future-enhancements)
+- [📚 References](#-references)
 
 ---
 
@@ -79,27 +77,48 @@ An intelligent, AI-powered recruitment intelligence tool that evaluates candidat
 +-------------------------------------------------------------+
 ```
 ---
+
 ## 📈 Performance & Evaluation
----
-The system was evaluated against standard test benchmarks for semantic similarity and candidate shortlisting:
-Metric	Score / Result	Details
-Accuracy	86.7%	Reliable overall matching performance
-Recall	100.0%	Identified all qualified candidates without false negatives
-Precision	77.8%	High match relevance
-Average Latency	459 ms / query	Real-time response speed
+
+The system was evaluated against real-world test pairs of resumes and job descriptions to measure semantic matching accuracy, candidate shortlisting reliability, and real-time processing efficiency[cite: 2]:
+
+| Metric | Score / Benchmark | Performance Analysis |
+| :--- | :---: | :--- |
+| **Accuracy** | **86.7%** | High overall reliability in matching candidate profiles to target job requirements[cite: 2]. |
+| **Recall** | **100.0%** | Identified all qualified candidates with zero false negatives[cite: 2]. |
+| **Precision** | **77.8%** | High match relevance, with minor false positives caused by closely related domain terms[cite: 2]. |
+| **Average Latency** | **459 ms / query** | Sub-second inference speed suitable for real-time interactive usage[cite: 2]. |
+
+### 🔍 Key Evaluation Highlights
+* **Zero False Negatives:** The 100% recall ensures no suitable candidate is erroneously rejected during screening[cite: 2].
+* **Low-Latency Inference:** Generates SBERT vector embeddings and computes Cosine Similarity in under half a second on standard CPU hardware[cite: 2].
+* **Reliable Classification:** Successfully separated suitable candidates from unqualified profiles across multi-domain test inputs[cite: 2].
 
 ---
 
+## 🛠️ Tech Stack & Dependencies
 
-## 🛠️ Tech Stack & Libraries
----
-Language: Python 3.11+
-Frontend / UI: Streamlit
-NLP & Deep Learning: Sentence-Transformers (`all-MiniLM-L6-v2`), Hugging Face Transformers, Scikit-learn
-Document Parsing: `pdfplumber`, `PyPDF2`, `python-docx`
-Database: SQLite
-Data Manipulation: `pandas`, `numpy`
----
+Built entirely using an open-source, lightweight Python ecosystem[cite: 2]:
+
+* **🐍 Core & Runtime**
+  * `Python 3.11+` – Primary backend programming language[cite: 2]
+  * `VS Code` & `Git / GitHub` – Development environment and version control[cite: 2]
+
+* **🖥️ User Interface**
+  * `Streamlit` – Interactive frontend web dashboard, routing, and session state management[cite: 2]
+
+* **🧠 AI, NLP & Semantic Matching**
+  * `Sentence-Transformers (SBERT)` – Transformer embeddings using the `all-MiniLM-L6-v2` model[cite: 2]
+  * `Hugging Face Transformers` – Deep learning model integration[cite: 2]
+  * `Scikit-Learn` – Cosine similarity calculation and classification evaluation metrics[cite: 2]
+
+* **📄 Document Ingestion & Parsing**
+  * `pdfplumber` & `PyPDF2` – Text and layout extraction from PDF resumes[cite: 2]
+  * `python-docx` – Text extraction from Microsoft Word documents[cite: 2]
+
+* **💾 Data Management & Persistence**
+  * `SQLite3` – Embedded local database for user authentication and match history logging[cite: 2]
+  * `Pandas` & `NumPy` – Structured data manipulation, array operations, and metrics processing[cite: 2]
 
 ## 📂 Project Structure
 ```plaintext
@@ -169,27 +188,54 @@ Open your browser and navigate to `http://localhost:8501`.
 ---
 
 ## 💡 How to Use
----
-Register / Login: Create a new account or log in with your existing credentials.
-Upload Resume: Select and upload your resume in `.pdf` or `.docx` format.
-Input Job Description: Either upload a job description file or paste the job text directly.
-Analyze: Click "Analyze Match" to trigger the AI pipeline.
-Review Insights:
-View your overall Semantic Match Percentage.
-Check Matched vs. Missing Skills.
-Read Actionable Tips to tailor your resume.
-Explore Recommended Courses to bridge any skill gaps.
-Check History: Go to the History tab in the sidebar to review past analyses anytime.
+
+Follow this step-by-step workflow to analyze and optimize your resume:
+
+1. **🔐 Authentication & Session Setup**
+   * Create a new profile on the registration screen or log in with your existing credentials[cite: 2].
+   * All subsequent evaluations will be automatically associated with your user session[cite: 2].
+
+2. **📄 Document Ingestion**
+   * **Resume:** Upload your resume document directly in `.pdf` or `.docx` format[cite: 2].
+   * **Job Description:** Paste the raw target job description into the text area or upload it as a file[cite: 2].
+
+3. **⚡ Trigger AI Semantic Analysis**
+   * Click **Analyze Match** to run the processing pipeline[cite: 2].
+   * The system extracts text, normalizes content, encodes SBERT embeddings, and matches domain skills[cite: 2].
+
+4. **📊 Comprehensive Insights & Results Dashboard**
+   * **Semantic Match Score:** Check the overall contextual compatibility percentage generated via Cosine Similarity[cite: 2].
+   * **Skill Gap Categorization:**
+     * 🟢 **Matched Skills:** Identified competencies present in both your resume and the job requirements[cite: 2].
+     * 🔴 **Missing Skills:** Critical requirements omitted from your resume[cite: 2].
+     * 🟣 **Additional Skills:** Candidate edge-strengths outside the core job description scope[cite: 2].
+   * **Actionable Resume Improvements:** Read dynamic, tailored suggestions to optimize your resume bullet points[cite: 2].
+   * **Course Recommendations:** Browse curated online certification courses mapped directly to your missing skills[cite: 2].
+
+5. **🕒 Analysis History Management**
+   * Switch to the **History** tab via the sidebar navigation[cite: 2].
+   * Review past similarity scores, expand detailed breakdowns, or delete outdated analysis logs from your local SQLite database[cite: 2].
 
 ---
 
 ## 🔮 Future Enhancements
----
-Recruiter Dashboard: Enable HR teams to upload a single job description and rank batch/multiple candidate resumes simultaneously.
-Layout-Aware OCR Parsing: Improved text extraction for multi-column and heavily styled resumes.
-LLM Integration: Provide generative AI feedback, personalized bullet point rewriting, and interview preparation questions.
-Cloud Deployment: Containerization with Docker and deployment to AWS / GCP.
----
+
+Key features and architectural improvements planned for future releases:
+
+* **👥 Recruiter Mode (Dual-User Platform):**
+  * Introduce an HR/Recruiter dashboard allowing batch uploads to rank and screen multiple candidates simultaneously against a single job description[cite: 2].
+
+* **🔍 Layout-Aware Vision & OCR Document Parsing:**
+  * Implement advanced layout parsers to preserve reading order in complex multi-column resumes, tables, graphics, and icon-based contact fields[cite: 2].
+
+* **🤖 Large Language Model (LLM) & RAG Integration:**
+  * Integrate LLMs to provide automated generative bullet-point rewrites, ATS formatting suggestions, and customized interview preparation questions[cite: 2].
+
+* **🔄 Dynamic Continuous Learning Loop:**
+  * Add a human-in-the-loop feedback mechanism to continuously expand the skill ontology and refine semantic scoring thresholds[cite: 2].
+
+* **☁️ Cloud & API Containerization:**
+  * Containerize the service with Docker and deploy scalable instances to cloud platforms (AWS / Azure / GCP) with RESTful API endpoints[cite: 2].
 
 ## 📚 References
 
